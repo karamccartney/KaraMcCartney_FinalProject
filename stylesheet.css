@@ -1,0 +1,99 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+
+	background-color: #C4BFB6;
+	text-align: left;
+}
+
+.container img {
+	float: left;
+}
+
+.container nav{
+	float: right;
+}
+
+.banner img {
+	width: 100%;
+	height: auto;
+}
+
+.portfolio {
+	background-color: #FFD100
+}
+
+.portfolio h2 {
+	text-align: center;
+
+}
+
+.portfolio1 {
+
+	float: left;
+	width: 33%;
+	text-align: center;
+}
+
+.portfolio2 {
+
+	float: left;
+	width: 33%;
+	text-align: center;
+}
+
+.portfolio3 {
+
+	float: left;
+	width: 33%;
+	text-align: center;
+}
+
+
+.aboutphoto{
+
+	float: left;
+	width: 50%;
+}
+
+.abouttext {
+
+	float: left;
+	width: 50%;
+}
+
+footer {
+	min-height: 200px
+	background-color: #C4BFB6;
+	text-align: right;
+}
+
+.seo {
+	float: left;
+	width: 33%;
+}
+
+.copyright {
+	float: left;
+	width: 33%;
+	text-align: center;
+}
+
+.contact {
+	float: left;
+	width: 33%;
+}
