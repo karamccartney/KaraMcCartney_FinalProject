@@ -16,8 +16,14 @@ html {
 
 body {
 
-	background-color: #C4BFB6;
+	background-color: #FFFFF;
 	text-align: left;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 .container img {
@@ -28,9 +34,37 @@ body {
 	float: right;
 }
 
-.banner img {
-	width: 100%;
-	height: auto;
+#background-slideshow{
+    position: relative;
+    height: 745px;
+    width: 1440px;
+    position: absolute;
+    top: 0px;
+    right: -10px;
+}
+
+img.slides{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    height: 745px;
+}
+
+img#img1{
+    z-index: -666;
+}
+
+img#img2{
+    z-index: -777;
+}
+
+img#img3{
+    z-index: -888;
+}
+
+img#img4{
+    z-index: -999;
 }
 
 .portfolio {
