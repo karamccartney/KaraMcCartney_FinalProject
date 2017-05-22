@@ -48,19 +48,19 @@ $(document).ready(function(){
 
     $('.portfolioslider').hide('.portfolioslider');
 
-    $('img').click(function() {
+    $('.slidetarget').click(function() {
 
         var portfolio = $(this);
 
-        if (portfolio === '.uprising') {
-            .show('#uprisingslider');
+        if (portfolio === '#uprising') {
+            $('#uprisingslider').show();
 
-        else if (portfolio === '.keto') {
-            .show ('#ketoslider');
-            else if (portfolio === '.primal') {
-                .show ('#primalslider');
-                else if (portfolio === '.hungry') {
-                    .show ('#hungryslider');
+        else if (portfolio === '#keto') {
+            $('#ketoslider').show();
+            else if (portfolio === '#primal') {
+                $('#primalslider').show();
+                else if (portfolio === '#hungry') {
+                $('#hungryslider').show;
                 }
                 event.preventDefault();
   })
