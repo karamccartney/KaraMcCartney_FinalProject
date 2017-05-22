@@ -1,33 +1,67 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
+$(function() {
 
-var indexer = 0;
-var animateInterval;
+var ul = $(".slider ul");
+var slide_count = ul.children().length;
+var slide_width_pc = 100.0 / slide_count;
+var slide_index = 0;
 
-function animate(){
-        if(indexer == 0){
-            $("#background-slideshow > #img1").fadeOut(2000);
-            $("#background-slideshow > #img2").fadeIn(2000);
-        }
-        else if(indexer == 1){
-            $("#background-slideshow > #img2").fadeOut(2000);
-            $("#background-slideshow > #img3").fadeIn(2000);
-        }
-        else if(indexer == 2){
-            $("#background-slideshow > #img3").fadeOut(2000);
-            $("#background-slideshow > #img4").fadeIn(2000);
-        }
-        else if(indexer == 3){
-            $("#background-slideshow > #img4").fadeOut(2000);
-            $("#background-slideshow > #img5").fadeIn(2000);
-        }
+ul.find("li").each(function(indx) {
+var left_percent = (slide_width_pc * indx) + "%";
+$(this).css({"left":left_percent});
+$(this).css({width:(100 / slide_count) + "%"});
+});
 
-        if(indexer == 3) indexer = 0;
-        else indexer++;
-    }
+// Listen for click of prev button
+$(".slider .prev").click(function() {
+console.log("prev button clicked");
+slide(slide_index - 1);
+});
 
-    animateInterval = setInterval(animate, 10000);
-    animate();
+// Listen for click of next button
+$(".slider .next").click(function() {
+console.log("next button clicked");
+slide(slide_index + 1);
+});
 
+function slide(new_slide_index) {
+
+if(new_slide_index < 0 || new_slide_index >= slide_count) return; 
+
+var margin_left_pc = (new_slide_index * (-100)) + "%";
+
+ul.animate({"margin-left": margin_left_pc}, 400, function() {
+
+slide_index = new_slide_index
+
+});
+
+}
+
+});
     });
+
+$(document).ready(function(){
+
+
+    $('.portfolioslider').hide('.portfolioslider');
+
+    $('img').click(function() {
+
+        var portfolio = $(this);
+
+        if (portfolio === '.uprising') {
+            .show('#uprisingslider');
+
+        else if (portfolio === '.keto') {
+            .show ('#ketoslider');
+            else if (portfolio === '.primal') {
+                .show ('#primalslider');
+                else if (portfolio === '.hungry') {
+                    .show ('#hungryslider');
+                }
+                event.preventDefault();
+  })
+});
